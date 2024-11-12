@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* text-align: center; */
+}
+body {
+  background: #cc2b5e;
+  background: linear-gradient(to right, #cc2b5e, #753a88);
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+h1 {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 50px;
+  font-weight: bold;
+  background: linear-gradient(to right, salmon, turquoise);
+  color: transparent;
+  background-clip: text;
+  /* display: inline-block; */
+}
+h3{
+    padding: 20px;
+    color: #fff;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  /* width: 500px; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* justify-content: center; */
+  align-items: center;
+}
+.container p {
+  margin-top: 40px;
+  /* text-align: center; */
+  max-width: 500px;
+  min-width: none;
+  width: fit-content;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.container .input_area  input {
+  height: 40px;
+  max-width: 100%;
+  gap: 10px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-top: 40px;
+  border-radius: 20px;
+  background: transparent;
+  box-shadow: inset 0 0 10px #f8a100;
+}
+.container .input_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 200px; */
+  /* flex-direction: column; */
+  /* width: 600px; */
+}
+.container .input_area  img {
+  height: 75px;
+  width: 75px;
+  margin-top: 30px;
+
+}
+  
+
+.container  #btn {
+  margin-top: 40px;
+  width: 300px;
+ 
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 2s;
+}
+#btn:hover {
+  background: linear-gradient(to bottom right, red, yellow);
+  /* transition: 5s; */
+}
+@media only screen and (max-width: 400px) {
+  .container .input_area  .first {
+    width: 100%;
+    margin-top: 2px;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+
+    font-size: 15px;
+  }
+  .container .input_area  {
+    flex-direction: column;
+  }
+  .container .input_area  img {
+    margin-top: 0;
+    /* height: 100px;
+    width: 100px; */
+    /* margin-left: 40%; */
+  }
+  .container p {
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 5px;
+    
+  }
+  .container .input_area  .second{
+    margin-top: 0;
+  }
+  h1{
+    font-size: 30px;
+  }
+}

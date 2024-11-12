@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <h1><span >LOVE  </span>   CALCULATOR</h1>
+   <br>
+
+     <div class="container">
+        <p>A love calculator is a fun, playful tool designed to estimate compatibility between two people based on their names. Often used for entertainment, it applies algorithms or random calculations to give a "love percentage," sparking curiosity and amusement. These calculators are popular among friends, couples, and curious individuals looking to see how they match with someone special. <a href="#" style="text-decoration: none; color: aliceblue;">Read More..</a></p>
+        
+        <form action="" method="post" id="form">
+
+         
+                
+            <!-- <div class="input"> -->
+                    <div class="input_area">
+
+                        <input type="text" placeholder="Enter Your Name" name="name" id="first">
+                        <br>
+                        <br>
+                        <img src="love.gif" alt="">
+                       <input type="text" placeholder="Enter Your Partner Name" name="partnerName" id="second">
+                    <!-- </div> -->
+                     
+                      
+                        
+        
+                </div>
+                <button id="btn">Calculate</button>
+               
+            </form>
+            <h3>------Your Relationship Result Here-----</h3>
+            <div class="res" id="res" style="font-size: 20px; color: aliceblue;">
+            </div>
+            <!-- <br>
+            <h3>------Your Relationship Status Here-----</h3>
+   
+            <div class="status" id="status" style="font-size: 20px; color: aliceblue;">
+
+            </div> -->
+            </div>
+          
+
+
+
+
+
+    <!-- <input type="text" id="first">
+    <input type="text" id="second">
+    <button onclick="calculate()">Click</button> -->
+</body>
+<script src="script.js"></script>
+<script>
+    // function calculate(){
+    //    const first= document.getElementById('first').value;
+    //    const second= document.getElementById('second').value;
+    //    let random=Math.floor(Math.random()*100);
+    //    alert(random)
+    // }
+
+    let url = 'https://script.google.com/macros/s/AKfycbx-I8jLU3hVbnchhNjiCxSgOHdl8PZeHfs7NSeVaS13PcASptcBjonaNi45sR-5PNjD/exec'
+       let form=document.getElementById('form')
+       form.addEventListener("submit",(e)=>{
+        //   e.target.btn.innerHTML="Submitting";
+        let data= new FormData(form);
+        fetch(url,{
+            method:"POST",
+            body:data
+        }).then((res)=>res.text())
+
+        .then((FinalRes)=>{
+            // alert(FinalRes)
+            form.reset();
+            // e.target.btn.innerHTML="Submit";
+        })
+
+       e.preventDefault();
+       })
+</script>
+</html>
